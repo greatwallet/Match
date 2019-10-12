@@ -42,7 +42,7 @@ namespace Match
             BCD = bcd;
         }
         // Convert digit to BCD
-        private byte digit2binary(int d)
+        public static byte digit2binary(int d)
         {
             switch(d)
             {
@@ -60,8 +60,8 @@ namespace Match
             }
         }
 
-        // Convert BCD to digit
-        private int binary2digit(byte b)
+        // Convert BCD to digit,if b is not a valid form for a digit, return -1
+        public static int binary2digit(byte b)
         {
             switch (b)
             {
@@ -75,7 +75,7 @@ namespace Match
                 case 0x07: return 7;
                 case 0x7f: return 8;
                 case 0x6f: return 9;
-                default: throw new Exception("Error in binary2digit");
+                default: return -1;//throw new Exception("Error in binary2digit");
             }
         }
 
@@ -105,7 +105,7 @@ namespace Match
 
         //Set a bit to one of the BCD.
         // 0<=n<=7; means the position of the bit 
-        public byte _setOneBit(int n)
+        private byte _setOneBit(int n)
         {
             Debug.Assert(n >= 0 && n <= 7);
             return Convert.ToByte(BCD | (0x01 << n));
@@ -114,7 +114,7 @@ namespace Match
         // expand the SSD by removing or placing ONE match
         public List<SSD> expand(Action act)
         {
-            var new_SSD_list = new List<SSD>();
+            var children = new List<SSD>();
             // Remove one match
             if (act == Action.Remove)
             {
@@ -122,9 +122,9 @@ namespace Match
                 {
                     // generate new ssd after removing 
                     byte bcd_rm = _setZeroBit(idx);
-                    if (bcd_rm == BCD) continue;
-                    SSD ssd_rm = new SSD(bcd_rm);
-                    new_SSD_list.Add(ssd_rm);
+                    // Note: should not completely remove the match
+                    if (bcd_rm == BCD || bcd_rm == 0) continue;
+                    children.Add(new SSD(bcd_rm));
                 }
             }
             // Place one match
@@ -135,11 +135,10 @@ namespace Match
                     // generate new ssd after placing 
                     byte bcd_pl = _setOneBit(idx);
                     if (bcd_pl == BCD) continue;
-                    SSD ssd_pl = new SSD(bcd_pl);
-                    new_SSD_list.Add(ssd_pl);
+                    children.Add(new SSD(bcd_pl));
                 }
             }
-            return new_SSD_list;
+            return children;
         }
 
         /* Functions aids to cut branches */
