@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Text.RegularExpressions;
 
 namespace Match
 {
@@ -45,6 +46,12 @@ namespace Match
         private static char orderBetween(char top,char cur)
         {
             return pri[IndexOfOprd(top), IndexOfOprd(cur)];
+        }
+
+        // preprocess the string by removing the space
+        public static string rmSpace(string src)
+        {
+            return Regex.Replace(src, @"\s+", "");
         }
 
         // read single or multiple digit - number from the expr, 
@@ -122,5 +129,6 @@ namespace Match
             // opnd.Count Supposed to be 1;
             return opnd.Pop();
         }
+
     }
 }

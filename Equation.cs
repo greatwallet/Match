@@ -244,6 +244,24 @@ namespace Match
 
         }
 
+        // Exist Function
+        private static bool exist(ref List<Equation> equ_list,ref Equation obj)
+        {
+            bool flag = true;
+            foreach (var equ in equ_list)
+            {
+                flag = true;
+                for (int i = 0; i < equ.ssds.Count; i++) 
+                {
+                    flag = flag & equ.ssds[i] == obj.ssds[i];
+                    if (equ.ssds[i] != obj.ssds[i])
+                        break;
+                }
+                if (flag == true) return true;
+            }
+            return false;
+        }
+
         /* Search algorithm */
         // TO TEST!
         public static void Search(ref Equation root, out List<Equation> ans_list, int movMatch = 1,int max_ans_num = 10)
@@ -285,7 +303,7 @@ namespace Match
                     // if "son".depth != 2 * matches, then still not ending!
                     if (son.get_depth() != 2 * movMatch) continue;
                     // now check!
-                    if (isCorrect(son)) ans_list.Add(son);
+                    if (isCorrect(son) && !exist(ref ans_list,ref son)) ans_list.Add(son);
                 }
             }
         }

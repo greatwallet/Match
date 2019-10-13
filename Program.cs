@@ -25,13 +25,13 @@ namespace Match
             //bool t = Equation.isCorrect(ref a);
 
             // test for search
-            string equ = "1+3*16=38";
-            List<string> ans_list;
-            Equation.Search(ref equ, out ans_list, 2, 5);
+            //string equ = "1+3*16=38";
+            //List<string> ans_list;
+            //Equation.Search(ref equ, out ans_list, 2, 2);
 
-            //Application.EnableVisualStyles();
-            //Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new MainWindow());
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new MainWindow());
         }
     }
 }
