@@ -127,7 +127,7 @@ namespace Match
         }
 
         // split the equation into expression, "=" and result
-        private static void splitEqu(ref string src, out string left, out string right)
+        public static void splitEqu(ref string src, out string left, out string right)
         {
             left = ""; right = "";
             for (int i = src.Length - 1; i >= 0; i--)

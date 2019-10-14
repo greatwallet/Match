@@ -87,6 +87,9 @@ namespace Match
         public static int evaluate(string expr)
         {
             expr = String.Concat(expr, '\0');
+            // check if expr has a negative number above
+            if (expr[0] == '-') expr = String.Concat('0',expr);
+
             // Stacks for operands and operators
             var opnd = new Stack<int>();
             var optr = new Stack<char>();
