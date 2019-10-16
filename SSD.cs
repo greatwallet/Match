@@ -94,6 +94,10 @@ namespace Match
         {
             return a.BCD != b.BCD;
         }
+        public bool Equals(SSD rt)
+        {
+            return BCD == rt.BCD;
+        }
 
         //Set a bit to zero of the BCD.
         // 0<=n<=7; means the position of the bit 
@@ -141,8 +145,25 @@ namespace Match
             return children;
         }
 
+        // count how many '1's there is in the byte
+        public static int countOnes(byte bcd)
+        {
+            int count = 0;
+            for (int i = 0; i < 7; i++) 
+                count += (bcd >> i) & 1;
+            return count;
+        }
+        // difference between 2 SSDs
+        public static int diff(byte left, byte right)
+        {
+            return countOnes(Convert.ToByte(left ^ right));
+        }
+        public static int diff(SSD left, SSD right)
+        {
+            return countOnes(Convert.ToByte(left.BCD ^ right.BCD));
+        }
         /* Functions aids to cut branches */
-        
+
         // get the "Match Loss" of the digit
         // public int match_loss()
     }

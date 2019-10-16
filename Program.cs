@@ -25,9 +25,19 @@ namespace Match
             //bool t = Equation.isCorrect(ref a);
 
             // test for search
-            //string equ = "1+3*16=38";
+
+            //string equ = "3+5=8";
+            //string puzzle;
+            //bool flag = Equation.GenerateSearch(ref equ, out puzzle, 2);
+            //string equ = "3+3=5";
             //List<string> ans_list;
-            //Equation.Search(ref equ, out ans_list, 2, 2);
+            //Equation.Search(ref equ, out ans_list, 1, 5);
+
+            // test for generate
+            //string expr;
+            //Equation.generateExprSrc(Level.HARD, out expr);
+            //Console.WriteLine(expr);
+
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

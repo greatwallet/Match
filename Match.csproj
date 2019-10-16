@@ -101,6 +101,15 @@
       <DependentUpon>SSD_match.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\Equation.datasource" />
+    <None Include="Properties\DataSources\Expr.datasource" />
+    <None Include="Properties\DataSources\MainWindow.datasource" />
+    <None Include="Properties\DataSources\match.datasource" />
+    <None Include="Properties\DataSources\Match.Properties.Resources.datasource" />
+    <None Include="Properties\DataSources\Match.Properties.Settings.datasource" />
+    <None Include="Properties\DataSources\Program.datasource" />
+    <None Include="Properties\DataSources\SSD.datasource" />
+    <None Include="Properties\DataSources\SSD_match.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

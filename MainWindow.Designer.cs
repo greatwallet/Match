@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.materialTabSelector1 = new MaterialSkin.Controls.MaterialTabSelector();
             this.materialTabControl1 = new MaterialSkin.Controls.MaterialTabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -35,15 +36,37 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel_level = new System.Windows.Forms.TableLayoutPanel();
             this.label_level = new System.Windows.Forms.Label();
-            this.comboBox_level = new System.Windows.Forms.ComboBox();
+            this.comboBox_level = new CCWin.SkinControl.SkinComboBox();
             this.Text_equ = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.Button_ans = new MaterialSkin.Controls.MaterialRaisedButton();
             this.Button_user = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
+            this.Button_ans = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.Button_next = new MaterialSkin.Controls.MaterialRaisedButton();
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             this.RB_generate = new MaterialSkin.Controls.MaterialRadioButton();
             this.RB_self_input = new MaterialSkin.Controls.MaterialRadioButton();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.Button_Theme = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.Button_Color = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.RB_matchNum_1 = new MaterialSkin.Controls.MaterialRadioButton();
+            this.RB_matchNum_2 = new MaterialSkin.Controls.MaterialRadioButton();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.Button_decrease = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.Button_increase = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.PGB_time = new MaterialSkin.Controls.MaterialProgressBar();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
+            this.RB_ans_num_1 = new MaterialSkin.Controls.MaterialRadioButton();
+            this.RB_ans_num_2 = new MaterialSkin.Controls.MaterialRadioButton();
+            this.RB_ans_num_5 = new MaterialSkin.Controls.MaterialRadioButton();
+            this.RB_ans_num_infty = new MaterialSkin.Controls.MaterialRadioButton();
             this.ssD_match1 = new Match.SSD_match();
             this.ssD_match2 = new Match.SSD_match();
             this.ssD_match3 = new Match.SSD_match();
@@ -72,12 +95,27 @@
             this.ssD_match26 = new Match.SSD_match();
             this.ssD_match27 = new Match.SSD_match();
             this.ssD_match28 = new Match.SSD_match();
+            this.equationBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.equationBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.materialTabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel_level.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
+            this.tableLayoutPanel7.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.tableLayoutPanel4.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.tableLayoutPanel5.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            this.tableLayoutPanel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.equationBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.equationBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // materialTabSelector1
@@ -183,7 +221,7 @@
             // label_level
             // 
             this.label_level.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label_level.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label_level.Font = new System.Drawing.Font("等线", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label_level.Location = new System.Drawing.Point(3, 6);
             this.label_level.Name = "label_level";
             this.label_level.Size = new System.Drawing.Size(76, 30);
@@ -194,17 +232,20 @@
             // 
             // comboBox_level
             // 
-            this.comboBox_level.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.comboBox_level.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboBox_level.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.comboBox_level.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox_level.FormattingEnabled = true;
             this.comboBox_level.Items.AddRange(new object[] {
             "EASY",
             "MEDIUM",
             "HARD"});
-            this.comboBox_level.Location = new System.Drawing.Point(106, 6);
+            this.comboBox_level.Location = new System.Drawing.Point(85, 6);
             this.comboBox_level.Name = "comboBox_level";
-            this.comboBox_level.Size = new System.Drawing.Size(117, 30);
+            this.comboBox_level.Size = new System.Drawing.Size(160, 30);
             this.comboBox_level.TabIndex = 3;
-            this.comboBox_level.Visible = false;
+            this.comboBox_level.WaterText = "";
+            this.comboBox_level.SelectedIndexChanged += new System.EventHandler(this.comboBox_level_SelectedIndexChanged);
             // 
             // Text_equ
             // 
@@ -228,8 +269,8 @@
             // 
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Controls.Add(this.Button_ans, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.Button_user, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel7, 0, 1);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(914, 148);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
@@ -239,30 +280,13 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(248, 82);
             this.tableLayoutPanel1.TabIndex = 6;
             // 
-            // Button_ans
-            // 
-            this.Button_ans.AutoSize = true;
-            this.Button_ans.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.Button_ans.Depth = 0;
-            this.Button_ans.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Button_ans.Enabled = false;
-            this.Button_ans.Icon = null;
-            this.Button_ans.Location = new System.Drawing.Point(3, 44);
-            this.Button_ans.MouseState = MaterialSkin.MouseState.HOVER;
-            this.Button_ans.Name = "Button_ans";
-            this.Button_ans.Primary = true;
-            this.Button_ans.Size = new System.Drawing.Size(242, 35);
-            this.Button_ans.TabIndex = 3;
-            this.Button_ans.Text = "自动解答";
-            this.Button_ans.UseVisualStyleBackColor = true;
-            this.Button_ans.Click += new System.EventHandler(this.Button_ans_Click);
-            // 
             // Button_user
             // 
             this.Button_user.AutoSize = true;
             this.Button_user.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.Button_user.Depth = 0;
             this.Button_user.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Button_user.Font = new System.Drawing.Font("等线", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button_user.Icon = null;
             this.Button_user.Location = new System.Drawing.Point(3, 3);
             this.Button_user.MouseState = MaterialSkin.MouseState.HOVER;
@@ -270,9 +294,65 @@
             this.Button_user.Primary = true;
             this.Button_user.Size = new System.Drawing.Size(242, 35);
             this.Button_user.TabIndex = 2;
-            this.Button_user.Text = "Start";
+            this.Button_user.Text = "尝试解答";
             this.Button_user.UseVisualStyleBackColor = true;
             this.Button_user.Click += new System.EventHandler(this.Button_user_Click);
+            // 
+            // tableLayoutPanel7
+            // 
+            this.tableLayoutPanel7.ColumnCount = 2;
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel7.Controls.Add(this.Button_ans, 0, 0);
+            this.tableLayoutPanel7.Controls.Add(this.Button_next, 1, 0);
+            this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel7.Location = new System.Drawing.Point(3, 44);
+            this.tableLayoutPanel7.Name = "tableLayoutPanel7";
+            this.tableLayoutPanel7.RowCount = 1;
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(242, 35);
+            this.tableLayoutPanel7.TabIndex = 3;
+            // 
+            // Button_ans
+            // 
+            this.Button_ans.AutoSize = true;
+            this.Button_ans.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.Button_ans.BackColor = System.Drawing.Color.White;
+            this.Button_ans.Depth = 0;
+            this.Button_ans.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Button_ans.Enabled = false;
+            this.Button_ans.Font = new System.Drawing.Font("等线", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button_ans.Icon = null;
+            this.Button_ans.Location = new System.Drawing.Point(3, 3);
+            this.Button_ans.MouseState = MaterialSkin.MouseState.HOVER;
+            this.Button_ans.Name = "Button_ans";
+            this.Button_ans.Primary = true;
+            this.Button_ans.Size = new System.Drawing.Size(115, 29);
+            this.Button_ans.TabIndex = 3;
+            this.Button_ans.Text = "自动解答";
+            this.Button_ans.UseVisualStyleBackColor = false;
+            this.Button_ans.Visible = false;
+            this.Button_ans.Click += new System.EventHandler(this.Button_ans_Click);
+            // 
+            // Button_next
+            // 
+            this.Button_next.AutoSize = true;
+            this.Button_next.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.Button_next.Depth = 0;
+            this.Button_next.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Button_next.Enabled = false;
+            this.Button_next.Font = new System.Drawing.Font("Verdana", 5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button_next.Icon = null;
+            this.Button_next.Location = new System.Drawing.Point(124, 3);
+            this.Button_next.MouseState = MaterialSkin.MouseState.HOVER;
+            this.Button_next.Name = "Button_next";
+            this.Button_next.Primary = true;
+            this.Button_next.Size = new System.Drawing.Size(115, 29);
+            this.Button_next.TabIndex = 4;
+            this.Button_next.Text = "Next ans";
+            this.Button_next.UseVisualStyleBackColor = true;
+            this.Button_next.Visible = false;
+            this.Button_next.Click += new System.EventHandler(this.Button_next_Click);
             // 
             // materialLabel1
             // 
@@ -324,6 +404,7 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.tableLayoutPanel2);
             this.tabPage2.Location = new System.Drawing.Point(4, 31);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -331,6 +412,328 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Settings";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 4;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel2.Controls.Add(this.groupBox1, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.groupBox2, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.groupBox3, 3, 0);
+            this.tableLayoutPanel2.Controls.Add(this.groupBox4, 2, 0);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 1;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1162, 230);
+            this.tableLayoutPanel2.TabIndex = 0;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.tableLayoutPanel3);
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox1.Font = new System.Drawing.Font("等线", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.groupBox1.Location = new System.Drawing.Point(3, 3);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(284, 224);
+            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "个性化";
+            // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.ColumnCount = 1;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.Controls.Add(this.Button_Theme, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.Button_Color, 0, 1);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(6, 68);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 2;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(278, 100);
+            this.tableLayoutPanel3.TabIndex = 0;
+            // 
+            // Button_Theme
+            // 
+            this.Button_Theme.AutoSize = true;
+            this.Button_Theme.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.Button_Theme.Depth = 0;
+            this.Button_Theme.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Button_Theme.Font = new System.Drawing.Font("等线", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.Button_Theme.Icon = null;
+            this.Button_Theme.Location = new System.Drawing.Point(3, 3);
+            this.Button_Theme.MouseState = MaterialSkin.MouseState.HOVER;
+            this.Button_Theme.Name = "Button_Theme";
+            this.Button_Theme.Primary = true;
+            this.Button_Theme.Size = new System.Drawing.Size(272, 44);
+            this.Button_Theme.TabIndex = 0;
+            this.Button_Theme.Text = "改变主题";
+            this.Button_Theme.UseVisualStyleBackColor = true;
+            this.Button_Theme.Click += new System.EventHandler(this.Button_Theme_Click);
+            // 
+            // Button_Color
+            // 
+            this.Button_Color.AutoSize = true;
+            this.Button_Color.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.Button_Color.Depth = 0;
+            this.Button_Color.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Button_Color.Font = new System.Drawing.Font("等线", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.Button_Color.Icon = null;
+            this.Button_Color.Location = new System.Drawing.Point(3, 53);
+            this.Button_Color.MouseState = MaterialSkin.MouseState.HOVER;
+            this.Button_Color.Name = "Button_Color";
+            this.Button_Color.Primary = true;
+            this.Button_Color.Size = new System.Drawing.Size(272, 44);
+            this.Button_Color.TabIndex = 1;
+            this.Button_Color.Text = "改变颜色";
+            this.Button_Color.UseVisualStyleBackColor = true;
+            this.Button_Color.Click += new System.EventHandler(this.Button_Color_Click);
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.tableLayoutPanel4);
+            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox2.Font = new System.Drawing.Font("等线", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.groupBox2.Location = new System.Drawing.Point(293, 3);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(284, 224);
+            this.groupBox2.TabIndex = 1;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "火柴数目";
+            // 
+            // tableLayoutPanel4
+            // 
+            this.tableLayoutPanel4.ColumnCount = 1;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.Controls.Add(this.RB_matchNum_1, 0, 0);
+            this.tableLayoutPanel4.Controls.Add(this.RB_matchNum_2, 0, 1);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(6, 68);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 2;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(272, 100);
+            this.tableLayoutPanel4.TabIndex = 1;
+            // 
+            // RB_matchNum_1
+            // 
+            this.RB_matchNum_1.AutoSize = true;
+            this.RB_matchNum_1.Checked = true;
+            this.RB_matchNum_1.Depth = 0;
+            this.RB_matchNum_1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.RB_matchNum_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.RB_matchNum_1.Location = new System.Drawing.Point(0, 0);
+            this.RB_matchNum_1.Margin = new System.Windows.Forms.Padding(0);
+            this.RB_matchNum_1.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.RB_matchNum_1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.RB_matchNum_1.Name = "RB_matchNum_1";
+            this.RB_matchNum_1.Ripple = true;
+            this.RB_matchNum_1.Size = new System.Drawing.Size(272, 50);
+            this.RB_matchNum_1.TabIndex = 0;
+            this.RB_matchNum_1.TabStop = true;
+            this.RB_matchNum_1.Text = "1";
+            this.RB_matchNum_1.UseVisualStyleBackColor = true;
+            this.RB_matchNum_1.CheckedChanged += new System.EventHandler(this.RB_matchNum_1_CheckedChanged);
+            // 
+            // RB_matchNum_2
+            // 
+            this.RB_matchNum_2.AutoSize = true;
+            this.RB_matchNum_2.Depth = 0;
+            this.RB_matchNum_2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.RB_matchNum_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.RB_matchNum_2.Location = new System.Drawing.Point(0, 50);
+            this.RB_matchNum_2.Margin = new System.Windows.Forms.Padding(0);
+            this.RB_matchNum_2.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.RB_matchNum_2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.RB_matchNum_2.Name = "RB_matchNum_2";
+            this.RB_matchNum_2.Ripple = true;
+            this.RB_matchNum_2.Size = new System.Drawing.Size(272, 50);
+            this.RB_matchNum_2.TabIndex = 1;
+            this.RB_matchNum_2.Text = "2";
+            this.RB_matchNum_2.UseVisualStyleBackColor = true;
+            this.RB_matchNum_2.CheckedChanged += new System.EventHandler(this.RB_matchNum_2_CheckedChanged);
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.tableLayoutPanel5);
+            this.groupBox3.Controls.Add(this.PGB_time);
+            this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox3.Font = new System.Drawing.Font("等线", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.groupBox3.Location = new System.Drawing.Point(873, 3);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(286, 224);
+            this.groupBox3.TabIndex = 2;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "允许算法最长搜索时间";
+            // 
+            // tableLayoutPanel5
+            // 
+            this.tableLayoutPanel5.ColumnCount = 2;
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel5.Controls.Add(this.Button_decrease, 0, 0);
+            this.tableLayoutPanel5.Controls.Add(this.Button_increase, 1, 0);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(6, 118);
+            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
+            this.tableLayoutPanel5.RowCount = 1;
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(274, 50);
+            this.tableLayoutPanel5.TabIndex = 2;
+            // 
+            // Button_decrease
+            // 
+            this.Button_decrease.AutoSize = true;
+            this.Button_decrease.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.Button_decrease.Depth = 0;
+            this.Button_decrease.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Button_decrease.Icon = null;
+            this.Button_decrease.Location = new System.Drawing.Point(3, 3);
+            this.Button_decrease.MouseState = MaterialSkin.MouseState.HOVER;
+            this.Button_decrease.Name = "Button_decrease";
+            this.Button_decrease.Primary = true;
+            this.Button_decrease.Size = new System.Drawing.Size(131, 44);
+            this.Button_decrease.TabIndex = 0;
+            this.Button_decrease.Text = "-1s";
+            this.Button_decrease.UseVisualStyleBackColor = true;
+            this.Button_decrease.Click += new System.EventHandler(this.Button_decrease_Click);
+            // 
+            // Button_increase
+            // 
+            this.Button_increase.AutoSize = true;
+            this.Button_increase.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.Button_increase.Depth = 0;
+            this.Button_increase.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Button_increase.Icon = null;
+            this.Button_increase.Location = new System.Drawing.Point(140, 3);
+            this.Button_increase.MouseState = MaterialSkin.MouseState.HOVER;
+            this.Button_increase.Name = "Button_increase";
+            this.Button_increase.Primary = true;
+            this.Button_increase.Size = new System.Drawing.Size(131, 44);
+            this.Button_increase.TabIndex = 1;
+            this.Button_increase.Text = "+1s";
+            this.Button_increase.UseVisualStyleBackColor = true;
+            this.Button_increase.Click += new System.EventHandler(this.Button_increase_Click);
+            // 
+            // PGB_time
+            // 
+            this.PGB_time.Depth = 0;
+            this.PGB_time.Location = new System.Drawing.Point(6, 91);
+            this.PGB_time.Maximum = 20;
+            this.PGB_time.Minimum = 1;
+            this.PGB_time.MouseState = MaterialSkin.MouseState.HOVER;
+            this.PGB_time.Name = "PGB_time";
+            this.PGB_time.Size = new System.Drawing.Size(280, 5);
+            this.PGB_time.TabIndex = 1;
+            this.PGB_time.Value = 10;
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.tableLayoutPanel6);
+            this.groupBox4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox4.Font = new System.Drawing.Font("等线", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox4.Location = new System.Drawing.Point(583, 3);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(284, 224);
+            this.groupBox4.TabIndex = 3;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "搜索答案最大数量";
+            // 
+            // tableLayoutPanel6
+            // 
+            this.tableLayoutPanel6.ColumnCount = 1;
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel6.Controls.Add(this.RB_ans_num_1, 0, 0);
+            this.tableLayoutPanel6.Controls.Add(this.RB_ans_num_2, 0, 1);
+            this.tableLayoutPanel6.Controls.Add(this.RB_ans_num_5, 0, 2);
+            this.tableLayoutPanel6.Controls.Add(this.RB_ans_num_infty, 0, 3);
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(6, 46);
+            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
+            this.tableLayoutPanel6.RowCount = 4;
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(272, 150);
+            this.tableLayoutPanel6.TabIndex = 0;
+            // 
+            // RB_ans_num_1
+            // 
+            this.RB_ans_num_1.AutoSize = true;
+            this.RB_ans_num_1.Checked = true;
+            this.RB_ans_num_1.Depth = 0;
+            this.RB_ans_num_1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.RB_ans_num_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.RB_ans_num_1.Location = new System.Drawing.Point(0, 0);
+            this.RB_ans_num_1.Margin = new System.Windows.Forms.Padding(0);
+            this.RB_ans_num_1.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.RB_ans_num_1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.RB_ans_num_1.Name = "RB_ans_num_1";
+            this.RB_ans_num_1.Ripple = true;
+            this.RB_ans_num_1.Size = new System.Drawing.Size(272, 37);
+            this.RB_ans_num_1.TabIndex = 0;
+            this.RB_ans_num_1.TabStop = true;
+            this.RB_ans_num_1.Text = "1";
+            this.RB_ans_num_1.UseVisualStyleBackColor = true;
+            this.RB_ans_num_1.CheckedChanged += new System.EventHandler(this.RB_ans_num_1_CheckedChanged);
+            // 
+            // RB_ans_num_2
+            // 
+            this.RB_ans_num_2.AutoSize = true;
+            this.RB_ans_num_2.Depth = 0;
+            this.RB_ans_num_2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.RB_ans_num_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.RB_ans_num_2.Location = new System.Drawing.Point(0, 37);
+            this.RB_ans_num_2.Margin = new System.Windows.Forms.Padding(0);
+            this.RB_ans_num_2.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.RB_ans_num_2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.RB_ans_num_2.Name = "RB_ans_num_2";
+            this.RB_ans_num_2.Ripple = true;
+            this.RB_ans_num_2.Size = new System.Drawing.Size(272, 37);
+            this.RB_ans_num_2.TabIndex = 1;
+            this.RB_ans_num_2.Text = "2";
+            this.RB_ans_num_2.UseVisualStyleBackColor = true;
+            this.RB_ans_num_2.CheckedChanged += new System.EventHandler(this.RB_ans_num_2_CheckedChanged);
+            // 
+            // RB_ans_num_5
+            // 
+            this.RB_ans_num_5.AutoSize = true;
+            this.RB_ans_num_5.Depth = 0;
+            this.RB_ans_num_5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.RB_ans_num_5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.RB_ans_num_5.Location = new System.Drawing.Point(0, 74);
+            this.RB_ans_num_5.Margin = new System.Windows.Forms.Padding(0);
+            this.RB_ans_num_5.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.RB_ans_num_5.MouseState = MaterialSkin.MouseState.HOVER;
+            this.RB_ans_num_5.Name = "RB_ans_num_5";
+            this.RB_ans_num_5.Ripple = true;
+            this.RB_ans_num_5.Size = new System.Drawing.Size(272, 37);
+            this.RB_ans_num_5.TabIndex = 2;
+            this.RB_ans_num_5.Text = "5";
+            this.RB_ans_num_5.UseVisualStyleBackColor = true;
+            this.RB_ans_num_5.CheckedChanged += new System.EventHandler(this.RB_ans_num_5_CheckedChanged);
+            // 
+            // RB_ans_num_infty
+            // 
+            this.RB_ans_num_infty.AutoSize = true;
+            this.RB_ans_num_infty.Depth = 0;
+            this.RB_ans_num_infty.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.RB_ans_num_infty.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.RB_ans_num_infty.Location = new System.Drawing.Point(0, 111);
+            this.RB_ans_num_infty.Margin = new System.Windows.Forms.Padding(0);
+            this.RB_ans_num_infty.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.RB_ans_num_infty.MouseState = MaterialSkin.MouseState.HOVER;
+            this.RB_ans_num_infty.Name = "RB_ans_num_infty";
+            this.RB_ans_num_infty.Ripple = true;
+            this.RB_ans_num_infty.Size = new System.Drawing.Size(272, 39);
+            this.RB_ans_num_infty.TabIndex = 3;
+            this.RB_ans_num_infty.Text = "∞";
+            this.RB_ans_num_infty.UseVisualStyleBackColor = true;
+            this.RB_ans_num_infty.CheckedChanged += new System.EventHandler(this.RB_ans_num_infty_CheckedChanged);
             // 
             // ssD_match1
             // 
@@ -640,6 +1043,14 @@
             this.ssD_match28.Size = new System.Drawing.Size(0, 0);
             this.ssD_match28.TabIndex = 27;
             // 
+            // equationBindingSource
+            // 
+            this.equationBindingSource.DataSource = typeof(Match.Equation);
+            // 
+            // equationBindingSource1
+            // 
+            this.equationBindingSource1.DataSource = typeof(Match.Equation);
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
@@ -661,6 +1072,24 @@
             this.tableLayoutPanel_level.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            this.tableLayoutPanel7.ResumeLayout(false);
+            this.tableLayoutPanel7.PerformLayout();
+            this.tabPage2.ResumeLayout(false);
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            this.tableLayoutPanel3.ResumeLayout(false);
+            this.tableLayoutPanel3.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.tableLayoutPanel4.ResumeLayout(false);
+            this.tableLayoutPanel4.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.tableLayoutPanel5.ResumeLayout(false);
+            this.tableLayoutPanel5.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.tableLayoutPanel6.ResumeLayout(false);
+            this.tableLayoutPanel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.equationBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.equationBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -681,7 +1110,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label_level;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel_level;
-        private System.Windows.Forms.ComboBox comboBox_level;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private SSD_match ssD_match1;
         private SSD_match ssD_match2;
@@ -711,6 +1139,31 @@
         private SSD_match ssD_match26;
         private SSD_match ssD_match27;
         private SSD_match ssD_match28;
+        private CCWin.SkinControl.SkinComboBox comboBox_level;
+        private System.Windows.Forms.BindingSource equationBindingSource;
+        private System.Windows.Forms.BindingSource equationBindingSource1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private MaterialSkin.Controls.MaterialRaisedButton Button_Theme;
+        private MaterialSkin.Controls.MaterialRaisedButton Button_Color;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
+        private MaterialSkin.Controls.MaterialRadioButton RB_matchNum_1;
+        private MaterialSkin.Controls.MaterialRadioButton RB_matchNum_2;
+        private MaterialSkin.Controls.MaterialProgressBar PGB_time;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
+        private MaterialSkin.Controls.MaterialRaisedButton Button_decrease;
+        private MaterialSkin.Controls.MaterialRaisedButton Button_increase;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
+        private MaterialSkin.Controls.MaterialRaisedButton Button_next;
+        private MaterialSkin.Controls.MaterialRadioButton RB_ans_num_1;
+        private MaterialSkin.Controls.MaterialRadioButton RB_ans_num_2;
+        private MaterialSkin.Controls.MaterialRadioButton RB_ans_num_5;
+        private MaterialSkin.Controls.MaterialRadioButton RB_ans_num_infty;
     }
 }
 
