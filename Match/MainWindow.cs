@@ -201,7 +201,7 @@ namespace Match
         // Start Playing!
         private void Button_user_Click(object sender, EventArgs e)
         {
-            // TODO: check the option: auto-generated or self-input
+            // check the option: auto-generated or self-input
             if (mode == Mode.SELF_INPUT)
             {
                 // Check if the equation is in right format
@@ -313,41 +313,5 @@ namespace Match
             }
         }
 
-        // set idx'th SSD
-        //private void initSSD(int idx, char c)
-        //{
-        //    switch(idx)
-        //    {
-        //        case 0: this.ssD_match1.display(c);break;
-        //        case 1: this.ssD_match2.display(c); break;
-        //        case 2: this.ssD_match3.display(c); break;
-        //        case 3: this.ssD_match4.display(c); break;
-        //        case 4: this.ssD_match5.display(c); break;
-        //        case 5: this.ssD_match6.display(c); break;
-        //        case 6: this.ssD_match7.display(c); break;
-        //        case 7: this.ssD_match8.display(c); break;
-        //        case 8: this.ssD_match9.display(c); break;
-        //        case 9: this.ssD_match10.display(c); break;
-        //        case 10: this.ssD_match11.display(c); break;
-        //        case 11: this.ssD_match12.display(c); break;
-        //        case 12: this.ssD_match13.display(c); break;
-        //        case 13: this.ssD_match14.display(c); break;
-        //        case 14: this.ssD_match15.display(c); break;
-        //        case 15: this.ssD_match16.display(c); break;
-        //        case 16: this.ssD_match17.display(c); break;
-        //        case 17: this.ssD_match18.display(c); break;
-        //        case 18: this.ssD_match19.display(c); break;
-        //        case 19: this.ssD_match20.display(c); break;
-        //        case 20: this.ssD_match21.display(c); break;
-        //        case 21: this.ssD_match22.display(c); break;
-        //        case 22: this.ssD_match23.display(c); break;
-        //        case 23: this.ssD_match24.display(c); break;
-        //        case 24: this.ssD_match25.display(c); break;
-        //        case 25: this.ssD_match26.display(c); break;
-        //        case 26: this.ssD_match27.display(c); break;
-        //        case 27: this.ssD_match28.display(c); break;
-        //        default:return;
-        //    }
-        //}
     }
 }

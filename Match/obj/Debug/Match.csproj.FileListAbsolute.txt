@@ -1,0 +1,14 @@
+D:\projects\software_default_project_directory\Visual Studio 2015\AI_Project\Match\Match\bin\Debug\Match.exe.config
+D:\projects\software_default_project_directory\Visual Studio 2015\AI_Project\Match\Match\bin\Debug\Match.exe
+D:\projects\software_default_project_directory\Visual Studio 2015\AI_Project\Match\Match\bin\Debug\Match.pdb
+D:\projects\software_default_project_directory\Visual Studio 2015\AI_Project\Match\Match\bin\Debug\CSkin.dll
+D:\projects\software_default_project_directory\Visual Studio 2015\AI_Project\Match\Match\bin\Debug\MaterialSkin.dll
+D:\projects\software_default_project_directory\Visual Studio 2015\AI_Project\Match\Match\bin\Debug\CSkin.xml
+D:\projects\software_default_project_directory\Visual Studio 2015\AI_Project\Match\Match\obj\Debug\Match.MainWindow.resources
+D:\projects\software_default_project_directory\Visual Studio 2015\AI_Project\Match\Match\obj\Debug\Match.match.resources
+D:\projects\software_default_project_directory\Visual Studio 2015\AI_Project\Match\Match\obj\Debug\Match.Properties.Resources.resources
+D:\projects\software_default_project_directory\Visual Studio 2015\AI_Project\Match\Match\obj\Debug\Match.SSD_match.resources
+D:\projects\software_default_project_directory\Visual Studio 2015\AI_Project\Match\Match\obj\Debug\Match.csproj.GenerateResource.Cache
+D:\projects\software_default_project_directory\Visual Studio 2015\AI_Project\Match\Match\obj\Debug\Match.exe
+D:\projects\software_default_project_directory\Visual Studio 2015\AI_Project\Match\Match\obj\Debug\Match.pdb
+D:\projects\software_default_project_directory\Visual Studio 2015\AI_Project\Match\Match\obj\Debug\Match.csprojResolveAssemblyReference.cache

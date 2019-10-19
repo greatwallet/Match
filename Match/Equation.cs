@@ -75,7 +75,6 @@ namespace Match
         }
 
         // from ssd to string, if transform successfully return True, else False
-        // TO TEST!
         public static bool ssd2str(ref List<SSD> src_ssd, ref Dictionary<int, char> src_optr, out string dest)
         {
             // string length
@@ -169,7 +168,6 @@ namespace Match
         }
 
         // check if an equation is right,input ssd
-        // TO TEST!
         public static bool isCorrect(ref List<SSD> ssd, ref Dictionary<int, char> optr)
         {
             string equ;
@@ -180,7 +178,6 @@ namespace Match
         }
 
         // check if an equation is right,input ssd
-        // TO TEST!
         public static bool isCorrect(Equation equ)
         {
             string equ_str;
@@ -200,17 +197,7 @@ namespace Match
                 default: throw new Exception("Error in inverse!");
             }
         }
-
-        /*       //// randomly choose an item from a list
-               //// TO TEST!
-               //public static SSD choice (List<SSD> ssd_list)
-               //{
-               //    Debug.Assert(ssd_list.Count > 0);
-               //    Random rnd = new Random();
-               //    int idx = rnd.Next(ssd_list.Count);
-               //    return ssd_list[idx];
-               //}*/
-
+  
 
         // check if the grandson has the same list as its grandpa! 
         private static bool sameAsGrandpa(Equation p, int ssd_idx)
@@ -253,7 +240,6 @@ namespace Match
                     // if same as grandpa: (means it goes back! ) then should be cut!
                     if (sameAsGrandpa(son, i)) continue;
                     // if the son's depth = 3, and son's ssds[i] == grandpa's ssds[i], then cut!
-                    // TO TEST
                     if (father.get_depth() == 2 && son.ssds[i] == father.anncestors[0].ssds[i])
                     {
                         continue;
@@ -501,7 +487,6 @@ namespace Match
         }
 
         // Generate a puzzle, if found return true, else false
-        // TO TEST
         public static bool GenerateSearch(ref Equation root, out Equation puzzle, int movMatch = 1)
         {
             root.Attribute = Action.Remove;
