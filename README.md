@@ -32,3 +32,6 @@ Please refer to [FILE_INSTRUCTIONS.md](Match/FILE_INSTRUCTIONS.md), which provid
 
 ## Portable EXE
 You may try the program in [`Match.exe`](Match/bin/Release/Match.exe)
+
+## Technical Report
+Please check out [`report.pdf`](report.pdf)
