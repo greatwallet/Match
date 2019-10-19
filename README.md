@@ -18,5 +18,7 @@ git clone https://github.com/greatwallet/Match
 * Open [`Match.sln`](Match.sln) in Visual Studio 2015 and re-compile the program
 * Open the `Match.exe` in the `Match/bin/Debug` or `Match/bin/Release` folder.
 
+## Instructions on Files
+Please refer to [FILE_INSTRUCTIONS.md](Match/FILE_INSTRUCTIONS.md), which provide details about how each of the `*.cs` file works.
 ## Portable EXE
 You may try the program in [`Match/bin/Release/Match.exe`](Match/bin/Release/Match.exe)
