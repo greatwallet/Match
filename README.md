@@ -34,4 +34,4 @@ Please refer to [FILE_INSTRUCTIONS.md](Match/FILE_INSTRUCTIONS.md), which provid
 You may try the program in [`Match.exe`](Match/bin/Release/Match.exe)
 
 ## Technical Report
-Please check out [`report.pdf`](report.pdf)
+Please check out [`Report.pdf`](Report.pdf)
